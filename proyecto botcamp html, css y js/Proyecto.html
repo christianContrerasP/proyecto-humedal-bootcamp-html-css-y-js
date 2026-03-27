@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="icon" type="image/png" href="Imagen/Fvimg.png">
+<script src="js/app.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Protección e Innovación en los Humedales de Bogotá</title>
+</head>   
+
+<body>
+
+<header>
+<h1>Humedales de Bogotá</h1>
+<nav>
+    <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Introduccion">Introducción</a></li>
+        <li><a href="#Importancia">Importancia</a></li>
+        <li><a href="#Problemas-ambientales">Problemas ambientales</a></li>
+        <li><a href="#Organizaciones">Organizaciones</a></li>
+        <li><a href="#Datos">Datos</a></li>
+        <li><a href="#Encuesta">Encuesta</a></li>
+    </ul>
+</nav>    
+</header>
+
+<main>
+
+<section id="Inicio" class="hero">
+                         <h2>Un ecosistema en riesgo</h2>
+    
+    <p>
+        Bienvenido a este espacio dedicado a los humedales de Bogotá, un proyecto desarrollado en conjunto con el propósito de informar, reflexionar y generar conciencia sobre la importancia de estos ecosistemas.
+
+Aquí encontrarás información clara y visual sobre su valor ambiental, los desafíos que enfrentan y el papel que todos podemos cumplir en su cuidado. Este trabajo no solo busca mostrar datos, sino también invitarte a comprender por qué los humedales son esenciales para la vida en la ciudad.
+
+Te invitamos a explorar, aprender y formar parte del cambio hacia una mayor protección y respeto por nuestro entorno natural.
+
+    </p>
+    <img src="img/humedal.jpeg" alt="Humedales de Bogotá">
+</section>
+
+<section id="Introduccion">
+    <h2>INTRODUCCIÓN</h2> 
+    <p>
+        Los humedales de Bogotá son ecosistemas naturales fundamentales para el equilibrio ambiental de la ciudad. 
+        Permiten la conservación de la biodiversidad, ayudan a regular el agua y contribuyen a la mitigación del cambio climático.
+        Sin embargo, el crecimiento urbano y la contaminación los han puesto en riesgo.
+    </p>
+</section>   
+
+<section id="Importancia">
+    <h2>IMPORTANCIA DE LOS HUMEDALES</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>BIODIVERSIDAD</h3>
+            <p>Albergan gran variedad de especies de aves, plantas y animales.</p>
+        </div>     
+
+        <div class="card">
+            <h3>REGULACIÓN DEL AGUA</h3>
+            <p>Evitan inundaciones y mantienen el equilibrio hídrico.</p>
+        </div>
+
+        <div class="card">
+            <h3>CAMBIO CLIMÁTICO</h3>
+            <p>Ayudan a reducir los efectos del cambio climático.</p>
+        </div>
+    </div>
+</section>
+
+<section id="Problemas-ambientales">
+    <h2>PROBLEMAS AMBIENTALES</h2>
+
+     <p class="texto-problema">
+        La contaminación es uno de los principales problemas de los humedales en Bogotá. 
+        La acumulación de basura y vertimientos de aguas residuales afectan gravemente 
+        la calidad del agua y ponen en riesgo la vida de muchas especies.
+    </p>
+    <div class="comparador">
+    <img src="img/humedal_ideal.png" class="img-fondo">
+
+    <div class="overlay" id="overlay">
+        <img src="img/humedal_real.png" class="img-frente">
+    </div>
+</div>
+
+<input type="range" min="0" max="100" value="50" id="slider">
+
+<p >Desliza para ver el impacto ambiental</p>
+</section>
+
+<section id="Organizaciones">
+    <h2>ORGANIZACIONES QUE PROTEGEN LOS HUMEDALES</h2>
+
+    <div class="cards">
+
+        <div class="card org-card">
+            <img src="img/secretaria-de-ambiente_0.jpg" alt="Secretaría de Ambiente">
+            <h3>Secretaría de Ambiente</h3>
+            <p>Entidad encargada de proteger y conservar los ecosistemas de Bogotá.</p>
+            <a href="https://www.ambientebogota.gov.co/" target="_blank">Visitar</a>
+        </div>
+
+        <div class="card org-card">
+            <img src="img/fundacion.jfif" alt="Fundación Humedales">
+            <h3>Fundación Humedales Bogotá</h3>
+            <p>Promueve la educación ambiental y la defensa de los humedales.</p>
+            <a href="https://humedalesbogota.com/" target="_blank">Visitar</a>
+        </div>
+
+        <div class="card org-card">
+            <img src="img/logos-ide-IAVH_12.jpg" alt="Instituto Humboldt">
+            <h3>Instituto Humboldt</h3>
+            <p>Investiga la biodiversidad y apoya la conservación ambiental en Colombia.</p>
+            <a href="https://www.humboldt.org.co/" target="_blank">Visitar</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="Datos">
+      <h2 class="centrado">DATOS Y ANÁLISIS</h2>  
+    <div class="contenedor-datos">
+
+    <!-- PROTECCIÓN LEGAL -->
+    <div class="fila-dato">
+        <div class="texto-dato">
+            <h3> Protección legal</h3>
+            <p>
+                En Colombia, las personas que defienden el medio ambiente cuentan con un reconocimiento jurídico especial,
+                ya que su labor es fundamental para la protección de ecosistemas como los humedales. A través del Acuerdo de Escazú
+                y decisiones de la Corte Constitucional, se establecen garantías para proteger su vida, seguridad y participación.
+                Sin embargo, en muchos casos estas medidas no se aplican de manera efectiva.
+            </p>
+        </div>
+
+        <div class="lado-dato">
+            <div class="grafico-dato">
+                    <canvas id="graficoProteccion"></canvas>
+            
+            
+            
+            </div>
+            <a href="https://repositorio.cepal.org/server/api/core/bitstreams/1450f2a5-6b42-4503-b758-a969c8720206/content" target="_blank" class="boton-dato">Ver más</a>
+        </div>
+    </div>
+
+    <!-- PROBLEMAS ACTUALES -->
+    <div class="fila-dato">
+        <div class="texto-dato">
+            <h3> Problemas actuales</h3>
+            <p>
+                Actualmente, quienes protegen el ambiente enfrentan múltiples riesgos como amenazas, falta de garantías de seguridad
+                y dificultades para acceder a la justicia. Esta situación limita su capacidad de acción y debilita la defensa de los
+                ecosistemas. Además, la falta de reconocimiento institucional hace que su labor muchas veces no sea valorada ni respaldada.
+            </p>
+        </div>
+
+        <div class="lado-dato">
+            <div class="grafico-dato">
+                <canvas id="graficoProblemas"></canvas>
+
+            </div>
+            <a href="https://agenciadenoticias.unal.edu.co/detalle/rio-bogota-concentra-bacterias-resistentes-y-parasitos-asociados-con-el-riego-agricola" target="_blank" class="boton-dato">Ver más</a>
+        </div>
+    </div>
+
+    <!-- FALLAS DE GESTIÓN -->
+    <div class="fila-dato">
+        <div class="texto-dato">
+            <h3> Fallas de gestión</h3>
+            <p>
+                Aunque existen normas y entidades encargadas de proteger el medio ambiente, en la práctica se evidencian fallas en su
+                implementación. La vigilancia ambiental es limitada y las respuestas ante daños ecológicos suelen ser tardías, lo que
+                permite que problemáticas como la contaminación y la expansión urbana sigan afectando a los humedales de Bogotá.
+            </p>
+        </div>
+
+        <div class="lado-dato">
+            <div class="grafico-dato">
+                    <canvas id="graficoArea"></canvas>
+            </div>
+           <a href="https://periodico.unal.edu.co/articulos/bogota-insiste-en-expandirse-poniendo-en-riesgo-la-reserva-thomas-van-der-hammen" target="_blank" class="boton-dato">Ver más</a>
+        </div>
+    </div>
+
+</div>
+<!-- ENCUESTA -->
+<section id="Encuesta">
+    <h2>ENCUESTA DE INNOVACIÓN AMBIENTAL</h2>
+
+    <form id="formEncuesta">
+
+        <div class="pregunta">
+            <p>1. ¿Consideras importantes los humedales para la ciudad?</p>
+            <label><input type="radio" name="p1" value="si" required> Sí</label>
+            <label><input type="radio" name="p1" value="no"> No</label>
+            <label><input type="radio" name="p1" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>2. ¿Crees que están bien protegidos?</p>
+            <label><input type="radio" name="p2" value="si" required> Sí</label>
+            <label><input type="radio" name="p2" value="no"> No</label>
+            <label><input type="radio" name="p2" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>3. ¿Conoces los humedales de Bogotá?</p>
+            <label><input type="radio" name="p3" value="si" required> Sí</label>
+            <label><input type="radio" name="p3" value="no"> No</label>
+            <label><input type="radio" name="p3" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>4. ¿La contaminación los afecta gravemente?</p>
+            <label><input type="radio" name="p4" value="si" required> Sí</label>
+            <label><input type="radio" name="p4" value="no"> No</label>
+            <label><input type="radio" name="p4" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>5. ¿Participarías en su cuidado?</p>
+            <label><input type="radio" name="p5" value="si" required> Sí</label>
+            <label><input type="radio" name="p5" value="no"> No</label>
+            <label><input type="radio" name="p5" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>6. ¿Crees que el gobierno hace lo suficiente?</p>
+            <label><input type="radio" name="p6" value="si" required> Sí</label>
+            <label><input type="radio" name="p6" value="no"> No</label>
+            <label><input type="radio" name="p6" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <div class="pregunta">
+            <p>7. ¿Te gustaría aprender más sobre ellos?</p>
+            <label><input type="radio" name="p7" value="si" required> Sí</label>
+            <label><input type="radio" name="p7" value="no"> No</label>
+            <label><input type="radio" name="p7" value="nsnr"> No sabe / No responde</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>Proyecto académico - Humedales de Bogotá</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
